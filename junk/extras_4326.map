@@ -1,0 +1,19 @@
+#mapfile for extras in epsg:3338 - Alaska Albers
+
+MAP
+	include "defaults/extras.wms.default.includes.map"
+	include "layers/extras/4326/drgs.layer.map"
+#  Moved down for DNR ESRI webapps.
+#	include "layers/extras/4326/drgs.shaded.layer.map"
+	include "layers/extras/4326/drgs_nolimits.layer.map"
+	include "layers/extras/4326/drgs_nolimits.shaded.layer.map"
+	include "layers/extras/4326/shaded_ned.layer.map"
+	include "layers/extras/4326/gina_bath.layer.map"
+	include "layers/extras/4326/pan.layer.map"
+        include "layers/extras/4326/blue_marble.layer.map"
+	include "layers/extras/4326/mid_res_landsat.layer.map"
+	include "layers/extras/4326/drgs.shaded.layer.map"
+	include "layers/extras/4326/terracolor.map"
+	include "layers/extras/4326/natural_earth.layer.map"
+	include "layers/extras/900913/forest_service.layer.map"
+END

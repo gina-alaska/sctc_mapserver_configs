@@ -1,0 +1,132 @@
+# Test
+MAP
+  IMAGETYPE      PNG
+  EXTENT         -2173726.500000  402068.531300  1503547.500000  2387380.000000 
+  SIZE           500 500
+  SHAPEPATH      "../data"
+  IMAGECOLOR     255 255 255
+#  FONTSET        "../fonts/fonts.list"
+
+    LEGEND
+    KEYSIZE 12 12
+    LABEL
+      TYPE BITMAP
+      SIZE MEDIUM
+      COLOR 0 0 89
+    END
+    STATUS ON
+  END
+
+ 	WEB
+        	METADATA
+                	"wms_title"             "TBD"
+                	"wms_name"              "TBD"
+                	"wms_abstract"          "TBD."
+                	include "includes/defaults/wms_defaults.include.map"
+                	"wms_onlineresource"    "http://wms.proto.gina.alaska.edu/wms/land_ownership?"
+			wms_enable_request 	"*"
+   		END
+	END
+
+        include "includes/defaults/output_formats.agg.include.map"
+
+### Not used for wms based stuff..
+        include "includes/projections/alaska_albers_nad83.include.map"
+
+  
+  # Start of LAYER DEFINITIONS ---------------------------------------------
+  LAYER # polygon layer begins here
+    NAME         states_poly
+    DATA         GLO_ak
+    STATUS       OFF
+    TYPE         POLYGON	
+	
+    CLASSITEM    "LS_GEN"
+    CLASS
+      NAME 'U.S.Forest Service'
+      EXPRESSION '11' # Only polygons where "Management" = 'U.S.Forest Service' will be drawn.
+      STYLE
+        COLOR      76  115  0
+      END
+    END
+	CLASS
+      NAME 'U.S.National Park Service'
+      EXPRESSION '12' # Only polygons where "Management" = 'U.S.National Park Service' will be drawn.
+      STYLE
+        COLOR      152  230  0
+      END
+    END
+	CLASS
+      NAME 'U.S. Fish & Wildlife-National Wildlife Refuge'
+      EXPRESSION '13' # Only polygons where "Management" = 'U.S. Fish & Wildlife-National Wildlife Refuge' will be drawn.
+      STYLE
+        COLOR      233  255  190
+      END
+	END
+	CLASS
+      NAME 'U.S.Bureau of Land Management'
+      EXPRESSION '15' # Only polygons where "Management" = 'U.S.Bureau of Land Management' will be drawn.
+      STYLE
+        COLOR      255  255  115
+      END
+    END
+	CLASS
+      NAME 'Wild & Scenic Rivers'
+      EXPRESSION '14' # Only polygons where "Management" = 'Wild & Scenic Rivers' will be drawn.
+      STYLE
+        COLOR      0  92  230
+      END
+	END
+	CLASS
+      NAME 'Military'
+      EXPRESSION '16' # Only polygons where "Management" = 'Military' will be drawn.
+      STYLE
+        COLOR      255  190  232
+      END
+	END
+	CLASS
+      NAME 'Native'
+      EXPRESSION '21' # Only polygons where "Management" = 'Native' will be drawn.
+      STYLE
+        COLOR      230  152  0
+      END
+	END
+	CLASS
+      NAME 'State'
+      EXPRESSION '31' # Only polygons where "Management" = 'State' will be drawn.
+      STYLE
+        COLOR      230  0  0
+      END
+	END
+	CLASS
+      NAME 'State and Native'
+      EXPRESSION '41' # Only polygons where "Management" = 'State and Native' will be drawn.
+      STYLE
+        COLOR      169  0  230
+      END
+	END
+	CLASS
+      NAME 'Private or Municipal'
+      EXPRESSION '51' # Only polygons where "Management" = 'Private or Municipal' will be drawn.
+      STYLE
+        COLOR      156  156  156
+      END	  
+    END
+  END # polygon layer ends here
+
+  LAYER # line layer begins here
+    NAME         states_line
+    DATA         GLO_ak
+    STATUS       OFF
+    TYPE         LINE
+
+    CLASS
+      NAME       'Boundaries'
+      STYLE
+        COLOR    75 75 75
+      END
+    END
+  END # States line layer ends here
+
+
+END # All map files must come to an end just as all other things must come to...

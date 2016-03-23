@@ -1,0 +1,154 @@
+# Map file created from QGIS project file /hub/scratch5/jcable/dgs/GINA.DGGS.QUAD.WEB_LAYER/qgis-project.qgs
+# Edit this file to customize for your map interface
+# (Created with PyQgis MapServer Export plugin)
+MAP
+  NAME "quads"
+  # Map image size
+  SIZE 100 100
+  UNITS meters
+  MAXSIZE 10000
+
+  FONTSET '/www/wms.proto/apps/fonts/default/fonts.lst'
+#  SYMBOLSET './symbols/symbols.txt'
+ EXTENT -169984.541131 1362936.590844 187281.701109 1592114.029186
+
+  PROJECTION
+    'proj=aea'
+    'lat_1=55'
+    'lat_2=65'
+    'lat_0=50'
+    'lon_0=-154'
+    'x_0=0'
+    'y_0=0'
+    'ellps=GRS80'
+    'towgs84=0,0,0,0,0,0,0'
+    'units=m'
+    'no_defs'
+  END
+
+  # Background color for the map canvas -- change as desired
+  IMAGECOLOR 255 255 255
+  IMAGEQUALITY 95
+  IMAGETYPE agg
+
+  OUTPUTFORMAT
+    NAME agg
+    DRIVER AGG/PNG
+    IMAGEMODE RGB
+  END
+  # Legend
+  LEGEND
+      IMAGECOLOR 255 255 255
+    STATUS ON
+    KEYSIZE 18 12
+    LABEL
+      TYPE BITMAP
+      SIZE MEDIUM
+      COLOR 0 0 89
+    END
+  END
+
+  # Web interface definition. Only the template parameter
+  # is required to display a map. See MapServer documentation
+  WEB
+    # Set IMAGEPATH to the path where MapServer should
+    # write its output.
+    IMAGEPATH '/tmp/'
+
+    # Set IMAGEURL to the url that points to IMAGEPATH
+    # as defined in your web server configuration
+    IMAGEURL '/tmp/'
+
+    # WMS server settings
+    METADATA
+      'ows_title'           'QGIS-MAP'
+      'ows_onlineresource'  'http://localhost/cgi-bin/mapserv?map=/home/jcable/scratch5/dgs/GINA.DGGS.QUAD.WEB_LAYER/quad.map'
+      'ows_srs'             'EPSG:3338 EPSG:900913'
+      'ows_enable_request'  '*'
+    END
+
+    #Scale range at which web interface will operate
+    # Template and header/footer settings
+    # Only the template parameter is required to display a map. See MapServer documentation
+    TEMPLATE 'fooOnlyForWMSGetFeatureInfo'
+  END
+
+  LAYER
+    NAME '250,000'
+    TYPE POLYGON
+    DUMP true
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    DATA '/www/wms.proto/apps/data/dggs/250,000.shp'
+    METADATA
+      'ows_title' '250,000'
+    END
+
+    STATUS OFF
+    TRANSPARENCY 100
+    PROJECTION
+    'proj=aea'
+    'lat_1=55'
+    'lat_2=65'
+    'lat_0=50'
+    'lon_0=-154'
+    'x_0=0'
+    'y_0=0'
+    'ellps=GRS80'
+    'towgs84=0,0,0,0,0,0,0'
+    'units=m'
+    'no_defs'
+    END
+    LABELITEM 'NAME'
+    CLASS
+       NAME '250,000' 
+       STYLE
+         WIDTH 2.625 
+         OUTLINECOLOR 57 185 10
+       END
+    END
+  END
+
+  LAYER
+    NAME '63,360'
+    TYPE POLYGON
+    #TYPE LINE
+    DATA '/www/wms.proto/apps/data/dggs/63360k.shp'
+    METADATA
+      'ows_title' '63,360'
+    END
+    MAXSCALE 1000000
+    STATUS OFF
+    TRANSPARENCY 100
+    PROJECTION
+    'proj=aea'
+    'lat_1=55'
+    'lat_2=65'
+    'lat_0=50'
+    'lon_0=-154'
+    'x_0=0'
+    'y_0=0'
+    'ellps=GRS80'
+    'towgs84=0,0,0,0,0,0,0'
+    'units=m'
+    'no_defs'
+    END
+
+    CLASS
+       NAME '63,360' 
+       STYLE
+         WIDTH 0.875 
+         OUTLINECOLOR 57 185 10
+       END
+    END
+  END
+
+  include "layers/quads/63360_labels.layers.map"
+  include "layers/quads/250k.labels.layers.map"
+  include "layers/quads/63360_labels_full.layers.map"
+  #include "layers/quads/63360_labels.x.layers.map" 
+  #include "layers/quads/63360_labels_full.x.layers.map"
+  #include "layers/quads/250k.labels.x.layers.map"
+
+
+
+END

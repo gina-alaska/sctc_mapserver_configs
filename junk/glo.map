@@ -1,0 +1,168 @@
+# Map file created from QGIS project file C:/NSSIweb/glo0711.qgs
+# Edit this file to customize for your map interface
+# (Created with PyQgis MapServer Export plugin)
+MAP
+  NAME "glo"
+  # Map image size
+  SIZE 500 500
+  UNITS meters
+
+  #EXTENT -2260516.077772 -187064.783604 1583224.082872 2975453.973704
+  #FONTSET './fonts/fonts.txt'
+  #SYMBOLSET './symbols/symbols.txt'
+  include "includes/projections/alaska_albers_nad83.include.map"
+  # Background color for the map canvas -- change as desired
+  IMAGECOLOR 255 255 255
+  IMAGEQUALITY 95
+  IMAGETYPE agg
+
+  OUTPUTFORMAT
+    NAME agg
+    DRIVER AGG/PNG
+    IMAGEMODE RGB
+  END
+  # Legend
+  LEGEND
+      IMAGECOLOR 255 255 255
+    STATUS ON
+    KEYSIZE 18 12
+    LABEL
+      TYPE BITMAP
+      SIZE MEDIUM
+      COLOR 0 0 89
+    END
+  END
+
+  # Web interface definition. Only the template parameter
+  # is required to display a map. See MapServer documentation
+  WEB
+    # Set IMAGEPATH to the path where MapServer should
+    # write its output.
+    IMAGEPATH '/tmp/'
+
+    # Set IMAGEURL to the url that points to IMAGEPATH
+    # as defined in your web server configuration
+    IMAGEURL '/tmp/'
+
+    # WMS server settings
+    METADATA
+      'ows_title'           'QGIS-MAP'
+      'ows_onlineresource'  'http://localhost/cgi-bin/mapserv.exe?map=C:/NSSIweb/glo0711.map'
+      'ows_srs'             'EPSG:4326 EPSG:3338 EPSG:3572'
+      wms_enable_request      "*"
+    END
+
+    #Scale range at which web interface will operate
+    # Template and header/footer settings
+    # Only the template parameter is required to display a map. See MapServer documentation
+    TEMPLATE 'fooOnlyForWMSGetFeatureInfo'
+  END
+
+  LAYER
+    NAME 'glo72011_D1'
+    TYPE POLYGON
+    DUMP true
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+   # EXTENT -2260516.077772 -187064.783604 1583224.082872 2975453.973704
+    DATA '/www/wms.proto/apps/data/glo72011_D1.shp'
+
+    METADATA
+      'ows_title' 'glo72011_D1'
+    END
+    STATUS OFF
+    TRANSPARENCY 100
+    include "includes/projections/alaska_albers_nad83.include.map"
+    CLASSITEM 'LSGEN'
+    CLASS
+      NAME "US Forest Service"
+      EXPRESSION "11" 
+       STYLE
+         WIDTH 1 
+         OUTLINECOLOR 0 0 0
+         COLOR 0 250 0
+       END
+    END
+    CLASS
+      NAME "National Park Service"
+      EXPRESSION "12" 
+       STYLE
+         WIDTH 1 
+         OUTLINECOLOR 0 0 0
+         COLOR 0 106 0
+       END
+    END
+    CLASS
+      NAME "USFWS National Wildlife Refuge"
+      EXPRESSION "13" 
+       STYLE
+         WIDTH 1 
+         OUTLINECOLOR 0 0 0
+         COLOR 142 176 47
+       END
+    END
+    CLASS
+      NAME "Wild and Scenic Rivers"
+      EXPRESSION "14" 
+       STYLE
+         WIDTH 1 
+         OUTLINECOLOR 0 0 0
+         COLOR 62 61 255
+       END
+    END
+    CLASS
+      NAME "Bureau of Land Management"
+      EXPRESSION "15" 
+       STYLE
+         WIDTH 1 
+         OUTLINECOLOR 150 150 74
+         COLOR 255 255 127
+       END
+    END
+    CLASS
+      NAME "Military"
+      EXPRESSION "16" 
+       STYLE
+         WIDTH 1 
+         OUTLINECOLOR 0 0 0
+         COLOR 213 0 0
+       END
+    END
+    CLASS
+      NAME "Native"
+      EXPRESSION "21" 
+       STYLE
+         WIDTH 1 
+         OUTLINECOLOR 0 0 0
+         COLOR 237 158 0
+       END
+    END
+    CLASS
+      NAME "State"
+      EXPRESSION "31" 
+       STYLE
+         WIDTH 1 
+         OUTLINECOLOR 0 0 0
+         COLOR 160 240 240
+       END
+    END
+    CLASS
+      NAME "State and Native"
+      EXPRESSION "41" 
+       STYLE
+         WIDTH 1 
+         OUTLINECOLOR 0 0 0
+         COLOR 138 207 207
+       END
+    END
+    CLASS
+      NAME "Private or Municipal"
+      EXPRESSION "51" 
+       STYLE
+         WIDTH 1 
+         OUTLINECOLOR 0 0 0
+         COLOR 186 184 255
+       END
+    END
+  END
+
+END

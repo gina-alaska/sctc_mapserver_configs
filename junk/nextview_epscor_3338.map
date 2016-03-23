@@ -1,0 +1,6 @@
+#mapfile for epsg:3338 - Alaska Albers
+
+MAP
+	include "defaults/nextview_epscor.wms.default.includes.map"
+	include "layers/nextview/epscor"
+END

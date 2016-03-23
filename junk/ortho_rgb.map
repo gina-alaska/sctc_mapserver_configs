@@ -1,0 +1,7 @@
+MAP 
+  NAME SPOT5.SDMI.ORTHO_RGB
+
+  include 'includes/defaults/boilerplate_guts.include.map'
+  include 'layers/spot/metadata/rgb.include.map'
+  include "layers/spot/aa/SPOT5.SDMI.ORTHO_RGB.map"
+END

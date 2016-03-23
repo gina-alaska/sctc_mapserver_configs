@@ -1,0 +1,295 @@
+MAP
+    NAME "DNRSpot"
+    STATUS ON
+    SIZE 260 260
+
+# This is boilerplate stuff... not applicable
+    IMAGETYPE jpeg
+    IMAGECOLOR 0 0 0
+
+# Debug is on!
+    DEBUG ON
+    SHAPEPATH "."
+    CONFIG "MS_ERRORFILE" "/dev/stderr"
+
+  MAXSIZE 14240
+
+
+OUTPUTFORMAT
+  NAME png24
+  DRIVER "GD/PNG"
+  MIMETYPE "image/png24"
+  IMAGEMODE RGBA
+  EXTENSION "png"
+END
+OUTPUTFORMAT
+  NAME png
+  DRIVER "GD/PNG"
+  MIMETYPE "image/png"
+  IMAGEMODE RGBA
+  EXTENSION "png"
+END
+OUTPUTFORMAT
+  NAME jpeg
+  DRIVER "GD/JPEG"
+  MIMETYPE "image/jpeg"
+  IMAGEMODE RGB
+  EXTENSION "jpg"
+END
+OUTPUTFORMAT
+  NAME GTiff
+  DRIVER "GDAL/GTiff"
+  MIMETYPE "image/tiff"
+  IMAGEMODE RGB
+  EXTENSION "tif"
+END
+
+
+
+### Not used for wms based stuff..
+     PROJECTION
+	"init=epsg:4326"
+     END
+
+     EXTENT -180 0 180 90
+
+     WEB
+	METADATA
+		#update with something more useful.
+                "wms_title"             "WIND (TBD)"
+                "wms_name"              "WIND (TBD)"
+                "wms_abstract"          "More info here."
+		include "includes/defaults/wms_defaults.include.map"
+                "wms_onlineresource" 	"http://wms.alaskamapped.org/wind?"
+        END
+    END
+
+
+include "wind/google_maps.layers"
+
+##################
+#  WIND
+
+    LAYER
+        name pwr50
+        type raster
+        status on
+        OFFSITE 0 0 0
+        DATA "/ogc/data/bdl/custom_work/wind/aa/pwr501.tif"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+
+        GROUP "Wind"
+
+        PROJECTION
+                "init=epsg:102006"
+        END
+        DEBUG ON
+
+        METADATA
+                 WMS_TITLE "pwr50"
+                "wms_group_title" "Wind"
+                 WMS_ABSTRACT "TBD."
+        END
+
+    END
+
+
+    LAYER
+        name spd100
+        type raster
+        status on
+        OFFSITE 0 0 0
+        DATA "/ogc/data/bdl/custom_work/wind/aa/spd1001.tif"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+
+        GROUP "Wind"
+
+        PROJECTION
+                "init=epsg:102006"
+        END
+        DEBUG ON
+
+        METADATA
+                 WMS_TITLE "spd100"
+                "wms_group_title" "Wind"
+                 WMS_ABSTRACT "TBD."
+        END
+
+    END
+
+
+    LAYER
+        name spd30
+        type raster
+        status on
+        OFFSITE 0 0 0
+        DATA "/ogc/data/bdl/custom_work/wind/aa/spd301.tif"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+
+        GROUP "Wind"
+
+        PROJECTION
+                "init=epsg:102006"
+        END
+        DEBUG ON
+
+        METADATA
+                 WMS_TITLE "spd30"
+                "wms_group_title" "Wind"
+                 WMS_ABSTRACT "TBD."
+        END
+
+    END
+
+
+    LAYER
+        name spd50
+        type raster
+        status on
+        OFFSITE 0 0 0
+        DATA "/ogc/data/bdl/custom_work/wind/aa/spd1001.tif"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+
+        GROUP "Wind"
+
+        PROJECTION
+                "init=epsg:102006"
+        END
+        DEBUG ON
+
+        METADATA
+                 WMS_TITLE "spd50"
+                "wms_group_title" "Wind"
+                 WMS_ABSTRACT "TBD."
+        END
+
+    END
+
+
+    LAYER
+        name spd70
+        type raster
+        status on
+        OFFSITE 0 0 0
+        DATA "/ogc/data/bdl/custom_work/wind/aa/spd301.tif"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+
+        GROUP "Wind"
+
+        PROJECTION
+                "init=epsg:102006"
+        END
+        DEBUG ON
+
+        METADATA
+                 WMS_TITLE "spd70"
+                "wms_group_title" "Wind"
+                 WMS_ABSTRACT "TBD."
+        END
+
+    END
+
+
+   LAYER
+        name "spd50-2010"
+
+        type raster
+        status on
+        OFFSITE 0 0 0
+        DATA "/ogc/data/bdl/custom_work/wind/updates/50m.colorized.tif"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+
+        GROUP "Wind"
+
+	include "includes/projections/4326.include.map"
+
+        DEBUG ON
+
+        METADATA
+                 WMS_TITLE "2010-spd50"
+                "wms_group_title" "Wind"
+                 WMS_ABSTRACT "TBD."
+        END
+
+    END
+
+   Layer
+	name "spd30-2010"
+        type raster
+        status on
+        OFFSITE 0 0 0
+        DATA "/ogc/data/bdl/custom_work/wind/updates/30m.colorized.tif"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+
+        GROUP "Wind"
+
+	include "includes/projections/4326.include.map"
+
+        DEBUG ON
+
+        METADATA
+                 WMS_TITLE "2010-spd30"
+                "wms_group_title" "Wind"
+                 WMS_ABSTRACT "TBD."
+        END
+
+    END
+
+   Layer
+	name "spd80-2010"
+        type raster
+        status on
+        OFFSITE 0 0 0
+        DATA "/ogc/data/bdl/custom_work/wind/updates/80m.colorized.tif"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+
+        GROUP "Wind"
+
+	include "includes/projections/4326.include.map"
+
+        DEBUG ON
+
+        METADATA
+                 WMS_TITLE "2010-spd50"
+                "wms_group_title" "Wind"
+                 WMS_ABSTRACT "TBD."
+        END
+
+    END
+
+   Layer
+	name "spd100-2010"
+        type raster
+        status on
+        OFFSITE 0 0 0
+        DATA "/ogc/data/bdl/custom_work/wind/updates/100m.colorized.tif"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+
+        GROUP "Wind"
+
+	include "includes/projections/4326.include.map"
+
+        DEBUG ON
+
+        METADATA
+                 WMS_TITLE "2010-spd100"
+                "wms_group_title" "Wind"
+                 WMS_ABSTRACT "TBD."
+        END
+
+    END
+
+
+
+
+
+END

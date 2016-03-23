@@ -1,0 +1,788 @@
+MAP
+    NAME NOAA_Charts
+    STATUS ON
+    SIZE 260 260
+
+# This is boilerplate stuff... not applicable
+    IMAGETYPE png24
+    IMAGECOLOR 0 0 0
+
+# Debug is on!
+    DEBUG ON
+    SHAPEPATH "."
+
+        include "includes/defaults/output_formats.agg.include.map"
+
+### Not used for wms based stuff..
+        include "includes/projections/4326.include.map"
+
+
+# Set the maximum size request to 20k by 20k
+ MAXSIZE 20480
+
+
+     EXTENT -180 0 180 90
+
+     WEB
+        METADATA
+                #update with something more useful.
+                "wms_title"             "NOAA Charts"
+                "wms_name"              "NOAA Charts"
+                "wms_abstract"          "This service provides a set of NOAA Charts for Alaskan waters."
+		include "includes/defaults/wms_defaults.include.map"
+                "wms_onlineresource"    "http://wms.alaskamapped.org/charts?"
+		#"wms_onlineresource"    "http://dib.gina.alaska.edu/charts?"
+		"wms_enable_request"    "*"
+        END
+    END
+
+
+
+
+##################
+#  Charts for 91447185260
+
+    LAYER
+        name noaa_chart_1000
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_1000_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 1000000000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:1000000000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:1000000000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447174120
+
+    LAYER
+        name noaa_chart_485
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_485_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 4850000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:4850000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:4850000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447175200
+
+    LAYER
+        name noaa_chart_350
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_350_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 3500000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:3500000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:3500000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447175920
+
+    LAYER
+        name noaa_chart_210
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_210_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 2100000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:2100000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:2100000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447177360
+
+    LAYER
+        name noaa_chart_155
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_155_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 1550000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:1550000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:1550000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447177720
+
+    LAYER
+        name noaa_chart_150
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_150_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 1500000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:1500000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:1500000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447178080
+
+    LAYER
+        name noaa_chart_140
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_140_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 1400000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:1400000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:1400000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447178440
+
+    LAYER
+        name noaa_chart_120
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_120_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 1200000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:1200000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:1200000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447178820
+
+    LAYER
+        name noaa_chart_110
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_110_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 1100000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:1100000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:1100000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447179340
+
+    LAYER
+        name noaa_chart_100
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_100_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 1000000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:1000000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:1000000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447171960
+
+    LAYER
+        name noaa_chart_95
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_95_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 950000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:950000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:950000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447172320
+
+    LAYER
+        name noaa_chart_85
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_85_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 850000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:850000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:850000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447172680
+
+    LAYER
+        name noaa_chart_80
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_80_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 800000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:800000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:800000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447173040
+
+    LAYER
+        name noaa_chart_70
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_70_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 700000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:700000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:700000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447173760
+
+    LAYER
+        name noaa_chart_50
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_50_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 500000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:500000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:500000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447174480
+
+    LAYER
+        name noaa_chart_40
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_40_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 400000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:400000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:400000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447174840
+
+    LAYER
+        name noaa_chart_35
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_35_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 350000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:350000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:350000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447175560
+
+    LAYER
+        name noaa_chart_30
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_30_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 300000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:300000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:300000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447176280
+
+    LAYER
+        name noaa_chart_20
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_20_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 200000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:200000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:200000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447177000
+
+    LAYER
+        name noaa_chart_15
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_15_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 150000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:150000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:150000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447179200
+
+    LAYER
+        name noaa_chart_10
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_10_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 100000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:100000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:100000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447173400
+
+    LAYER
+        name noaa_chart_5
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_5_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 50000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:50000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:50000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447176640
+
+    LAYER
+        name noaa_chart_1
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_1_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 10000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:10000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:10000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+##################
+#  Charts for 91447179220
+
+    LAYER
+        name noaa_chart_0
+        type raster
+        status on
+        OFFSITE 0 0 0
+        TILEINDEX "/ogc/data/bdl/charts/grouped/indexs/noaa_chart_0.5_meter.shp"
+
+        PROCESSING "RESAMPLE=BILINEAR"
+        PROJECTION
+                "init=epsg:102006"
+        END
+
+        GROUP "Charts"
+
+        DEBUG ON
+        MINSCALE 1
+        MAXSCALE 5000
+
+        METADATA
+                WMS_TITLE     "NOAA_Charts_1:5000"
+                WMS_ABSTRACT  "This layer is composed of scanned digital raster graphic (DRG) maps at 1:250,000 scale."
+                "wms_title"   "NOAA_Charts_1:5000"
+                "wms_group_title" "Charts"
+        END
+
+    END
+
+
+
+END
+

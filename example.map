@@ -1,0 +1,4 @@
+#starting template
+MAP
+	include "defaults/example.wms.default.includes.map"
+END

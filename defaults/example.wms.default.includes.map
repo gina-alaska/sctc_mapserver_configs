@@ -1,0 +1,44 @@
+	NAME Example
+	STATUS ON
+	SIZE 260 260
+
+# This is boilerplate stuff... not applicable
+	IMAGETYPE png24
+	IMAGECOLOR 0 0 0
+
+# Debug is on!
+#	DEBUG 5
+	SHAPEPATH "."
+#	CONFIG "MS_ERRORFILE" "/dev/stderr"
+
+
+#default max size is 6k by 6k..
+	MAXSIZE 13312
+
+# Output formats - only important thing is png24 - 24bit pngs.
+
+	include "includes/defaults/output_formats.agg.include.map"
+
+### Not used for wms based stuff..
+	#include "includes/projections/4326.include.map"
+	PROJECTION
+		"init=epsg:4326"
+	END
+
+	EXTENT -180 -90 180 90
+
+	WEB
+		METADATA
+	                #update with something more useful.
+			"wms_title"             "Example WMS"
+			"wms_name"              "Example WMS"
+			"wms_abstract"          "A WMS-compliant map server provided .. ."
+	                include "includes/defaults/wms_defaults.include.map"
+			"wms_onlineresource"    "http://SERVER/URL?"
+			"wms_enable_request"	"*"
+			#"wms_extent" "-180 -90 180 90"
+			#"wms_srs" "4326"
+		END
+    END
+
+

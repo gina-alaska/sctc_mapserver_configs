@@ -1,0 +1,7 @@
+MAP 
+  NAME SPOT5.SDMI.ORTHO_CIR.PILOT
+
+  include 'includes/defaults/boilerplate_guts.include.map'
+  include 'layers/spot/metadata/cir.include.map'
+  include "layers/spot/aa/SPOT5.SDMI.ORTHO_CIR.map"
+END

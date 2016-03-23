@@ -1,0 +1,134 @@
+defaults:
+  envsh: /opt/mapping_tools_builds/2015.11.12/setup.sh
+  mapserv: /opt/mapping_tools_builds/2015.11.12/bin/mapserv
+  timeout: 3600
+  maps:
+    unused: no_such_map
+configs:
+  "/extras":
+    prefix: "extras"
+    url: "extras"
+    projections:
+      default: "extras_4326.map"
+      4326: "extras_4326.map"
+      900913: "extras_900913.map"
+      3338: "extras_3338.map"
+      102006: "extras_3338.map"
+      26732: "extras_3338.map"
+      26733: "extras_3338.map"
+      26734: "extras_3338.map"
+      26735: "extras_3338.map"
+      26736: "extras_3338.map"
+      26737: "extras_3338.map"
+      26738: "extras_3338.map"
+      26739: "extras_3338.map"
+      26740: "extras_3338.map"
+      26906: "extras_3338.map"
+      3572:  "extras_3572.map"
+  "/faa_charts":
+    prefix: "faa_charts"
+    url: "faa_charts"
+    projections:
+      default: "faa_charts.map"
+  "/charts":
+    prefix: "charts"
+    url: "charts"
+    projections:
+      default: "charts.map"
+  "/charts_nc":
+    prefix: "charts_nc"
+    url: "charts_nc"
+    projections:
+      default: "charts_nc.map"
+  "/bdl":
+    prefix: "bdl"
+    url: "bdl"
+    projections:
+      default: "bdl_4326.map"
+      4326: "bdl_4326.map"
+      900913: "bdl_900913.map"
+      3338: "bdl_3338.map"
+      102006: "bdl_3338.map"
+      26903: "bdl_26903.map"
+      26904: "bdl_26904.map"
+      26905: "bdl_26905.map"
+      26906: "bdl_26906.map"
+      26907: "bdl_26907.map"
+      26908: "bdl_26908.map"
+      900913: "bdl_900913.map"
+      102634: "bdl_102634.map"
+      32606: "bdl_32606.map"
+      3857: "bdl_900913.map"
+      3572: "bdl_3572.map"
+      3573: "bdl_3573.map"
+      3574: "bdl_3574.map"
+      3575: "bdl_3575.map"
+      3576: "bdl_3576.map"
+      26931: "bdl_3338.map"
+  "/ifsar":
+    prefix: "ifsar"
+    url: "ifsar"
+    projections:
+      default:  "ifsar_3338.map"
+  "/ortho/cir":
+    prefix: "ortho"
+    url: "ortho/cir"
+    projections:
+      default: "ortho_cir.map"
+      3338: "ortho_cir.map"
+  "/ortho/pan":
+    prefix: "ortho"
+    url: "ortho/pan"
+    projections:
+      default: "ortho_pan.map"
+      3338: "ortho_pan.map"
+  "/ortho/rgb":
+    prefix: "ortho"
+    url: "ortho/rgb"
+    projections:
+      default: "ortho_rgb.map"
+      3338: "ortho_rgb.map"
+  "/ortho":
+    prefix: "ortho"
+    url: "ortho"
+    projections:
+      default: "ortho.map"
+      3338: "ortho.map"
+  "/wcs":
+    mapserv: /opt/mapping_tools_builds/2009_01_29/bin/mapserv
+    envsh: /opt/mapping_tools_builds/2009_01_29/setup.sh
+    prefix: "wcs"
+    url: "wcs"
+    projections:
+      default: "wcs.map"
+  "/wcs_esri":
+    mapserv: /opt/mapping_tools_builds/2009_01_29/bin/mapserv
+    envsh: /opt/mapping_tools_builds/2009_01_29/setup.sh
+    prefix: "wcs_esri"
+    url: "wcs_esri"
+    projections:
+      default: "wcs_esri_error.map"
+  "/wind":
+    mapserv: /opt/mapping_tools_builds/2009_01_29/bin/mapserv
+    envsh: /opt/mapping_tools_builds/2009_01_29/setup.sh
+    prefix: "wind"
+    url: "wind"
+    projections:
+      default: "wind.map"
+  "/aoos":
+    mapserv: /opt/mapping_tools_builds/2009_01_29/bin/mapserv
+    envsh: /opt/mapping_tools_builds/2009_01_29/setup.sh
+    prefix: "aoos"
+    url: "aoos"
+    projections:
+      default: "aoos.map"
+  "/test":
+    mapserv: /opt/mapping_tools_builds/2012-01-18/bin/mapserv.svn
+    envsh: /opt/mapping_tools_builds/2012-01-18/setup.sh
+    prefix: "test"
+    url: "test"
+    projections:
+      default: "test_3338.map"
+      4326: "test_4326.map"
+      900913: "test_900913.map"
+      3338: "test_3338.map"

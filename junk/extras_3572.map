@@ -1,0 +1,17 @@
+#mapfile for extras in epsg:3572 - Alaska Albers
+
+MAP
+	include "defaults/extras.wms.default.includes.map"
+	include "layers/extras/3338/drgs.layer.map"
+	include "layers/extras/3338/drgs.shaded.layer.map"
+	include "layers/extras/3338/drgs_nolimits.layer.map"
+	include "layers/extras/3338/drgs_nolimits.shaded.layer.map"
+	include "layers/extras/3338/shaded_ned.layer.map"
+	include "layers/extras/3338/gina_bath.layer.map"
+	include "layers/extras/3338/pan.layer.map"
+	include "layers/extras/4326/blue_marble.layer.map"
+	include "layers/extras/4326/mid_res_landsat.layer.map"
+	include "layers/extras/3338/terracolor.map"
+	include "layers/extras/3572/natural_earth.layer.map"
+	include "layers/extras/3338/forest_service.layer.map"
+END

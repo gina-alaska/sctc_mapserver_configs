@@ -1,0 +1,117 @@
+# Map file created from QGIS project file /home/jcable/data/tls/tls.qgs
+# Edit this file to customize for your map interface
+# (Created with PyQgis MapServer Export plugin)
+MAP
+  NAME "tls"
+  # Map image size
+  SIZE 100 100
+  UNITS meters
+
+  MAXSIZE 10000
+
+  EXTENT 58978.407056 1624129.521681 148446.055422 1681520.800349
+
+  FONTSET '/www/wms.proto/apps/fonts/default/fonts.lst'
+  include "includes/projections/alaska_albers_nad83.include.map"
+
+  # Background color for the map canvas -- change as desired
+  IMAGECOLOR 255 255 255
+  IMAGEQUALITY 95
+  IMAGETYPE agg
+
+  OUTPUTFORMAT
+    NAME agg
+    DRIVER AGG/PNG
+    IMAGEMODE RGB
+  END
+  # Legend
+  LEGEND
+      IMAGECOLOR 255 255 255
+    STATUS ON
+    KEYSIZE 18 12
+    LABEL
+      TYPE BITMAP
+      SIZE MEDIUM
+      COLOR 0 0 89
+    END
+  END
+
+  # Web interface definition. Only the template parameter
+  # is required to display a map. See MapServer documentation
+  WEB
+    # Set IMAGEPATH to the path where MapServer should
+    # write its output.
+    IMAGEPATH '/tmp/'
+
+    # Set IMAGEURL to the url that points to IMAGEPATH
+    # as defined in your web server configuration
+    IMAGEURL '/tmp/'
+
+    # WMS server settings
+    METADATA
+      'ows_title'           'QGIS-MAP'
+      'ows_onlineresource'  'http://localhost/cgi-bin/mapserv?map=/home/jcable/data/tls/tls.map'
+      'ows_srs'             'EPSG:4326 EPSG:3338'
+      'ows_enable_request'  '*'
+    END
+
+    #Scale range at which web interface will operate
+    # Template and header/footer settings
+    # Only the template parameter is required to display a map. See MapServer documentation
+    TEMPLATE 'fooOnlyForWMSGetFeatureInfo'
+  END
+
+  LAYER
+    NAME 'PLS_TOWNSHIP_PY_w_label'
+    TYPE POLYGON
+    DUMP false
+    DATA '/www/wms.proto/apps/data/tls/PLS_TOWNSHIP_PY_w_label.shp'
+    METADATA
+      'ows_title' 'PLS_TOWNSHIP_PY_w_label'
+    END
+    STATUS ON
+    TRANSPARENCY 100
+    include "includes/projections/alaska_albers_nad83.include.map"
+
+    CLASS
+       NAME 'PLS_TOWNSHIP_PY_w_label'
+       STYLE
+         WIDTH 3.5
+         OUTLINECOLOR 255 85 0
+       END
+    END
+  END
+
+  LAYER
+    NAME 'label'
+    TYPE POLYGON
+    DATA '/www/wms.proto/apps/data/tls/PLS_TOWNSHIP_PY_w_label.shp'
+    METADATA
+      'ows_title' 'PLS_TOWNSHIP_PY_w_label'
+    END
+
+    MAXSCALE 500000
+    STATUS ON
+    TRANSPARENCY 100
+    include "includes/projections/alaska_albers_nad83.include.map"
+    LABELITEM 'Label'
+    CLASS
+     LABEL
+      ALIGN center
+      WRAP "\n"
+      FONT tls_label
+      TYPE truetype
+      SIZE 12
+      COLOR 161 53 0
+      ANGLE 0
+      OUTLINECOLOR 255 255 255
+      POSITION cc
+      FORCE false
+      ANTIALIAS true
+      PARTIALS false
+     END
+    END
+  END
+
+
+END

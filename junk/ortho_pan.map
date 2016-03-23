@@ -1,0 +1,7 @@
+MAP 
+  NAME SPOT5.SDMI.ORTHO.PAN
+
+  include 'includes/defaults/boilerplate_guts.include.map'
+  include 'layers/spot/metadata/pan.include.map'
+  include "layers/spot/aa/SPOT5.SDMI.ORTHO_PAN.map"
+END

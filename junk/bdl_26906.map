@@ -1,0 +1,6 @@
+MAP
+	include "defaults/bdl.wms.default.includes.map"
+	include "layers/bdl/3338/low.include.map"
+	include "layers/bdl/3338/mid.include.map"
+	include "layers/bdl/26906/high.include.map"
+END

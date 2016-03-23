@@ -1,0 +1,8 @@
+#mapfile for epsg:3572
+
+MAP
+	include "defaults/bdl.wms.default.includes.map"
+	include "layers/bdl/900913/low.include.map"
+	include "layers/bdl/900913/mid.include.map"
+	include "layers/bdl/900913/high.include.map"
+END

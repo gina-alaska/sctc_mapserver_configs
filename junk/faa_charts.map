@@ -1,0 +1,6 @@
+#mapfile for epsg:3338 - Alaska Albers
+
+MAP
+	include "defaults/faa.wms.default.include.map"
+	include "layers/faa/3338/faa_charts.layer.map"
+END

@@ -1,0 +1,5 @@
+MAP
+	include "defaults/test.wms.default.includes.map"
+	include "layers/test/3338/chukotka.layer.map"
+	include "layers/test/3338/1.20130626.1948.layer.map"
+END
