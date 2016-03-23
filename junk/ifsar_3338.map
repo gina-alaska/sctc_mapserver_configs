@@ -1,6 +1,0 @@
-#mapfile for epsg:3572
-
-MAP
-	include "defaults/ifsar.wms.default.includes.map"
-	include "layers/ifsar/3338.include.map"
-END
