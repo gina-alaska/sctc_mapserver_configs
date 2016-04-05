@@ -29,15 +29,12 @@
 
 	WEB
 		METADATA
-	                #update with something more useful.
 			"wms_title"             "Example WMS"
 			"wms_name"              "Example WMS"
 			"wms_abstract"          "A WMS-compliant map server provided .. ."
 	                include "includes/defaults/wms_defaults.include.map"
-			"wms_onlineresource"    "http://SERVER/URL?"
+			"wms_onlineresource"    "http://ogc-pvt.gina.alaska.edu/sctc-pvt/example"
 			"wms_enable_request"	"*"
-			#"wms_extent" "-180 -90 180 90"
-			#"wms_srs" "4326"
 		END
     END
 
