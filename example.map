@@ -1,5 +1,5 @@
 #starting template
 MAP
 	include "defaults/example.wms.default.includes.map"
-        include 
+        include "layers/example/example.layer.map"
 END
