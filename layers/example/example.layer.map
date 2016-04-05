@@ -1,0 +1,17 @@
+LAYER
+  NAME "Example"
+  STATUS on
+  DATA "/ogc/data/sctc-pvt/example/example.tif"
+  TYPE RASTER
+  OFFSITE 0 0 0 
+  DEBUG on
+  include "includes/projections/geo.include.map"
+  GROUP "Test"
+  METADATA
+       "wms_title"     	"Example"
+       WMS_ABSTRACT    	"Example for pvt"
+	"wms_group_abstract" 	"Example for pvt"
+ 	"wms_group_title" 	"Example for pvt"
+  END
+END
+
